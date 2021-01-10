@@ -1,0 +1,102 @@
+@import "bloben-common/globals/theme.scss";
+
+.svg-logo {
+  width: 24px;
+  height: 24px;
+  @media screen and (min-width: 300px) {
+    // ex. iPhone 5s
+    width: 35px;
+    height: 35px;
+  }
+  @media screen and (min-width: 350px) {
+    // ex. iPhone 6
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (min-width: 400px) {
+    // ex. iPhone 6 plus
+    width: 45px;
+    height: 45px;
+  }
+  @media (min-width: 1600px) {
+    // Big screens
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+.logo_name__wrapper {
+  width: 100%;
+  //padding: 12px 24px 12px 24px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media (max-width: 750px) {
+    height: 34px;
+  }
+}
+.logo_name__row {
+  top: 0;
+  left: 0;
+  padding: 6px 24px 6px 24px ;
+  background: $GRAY_900;
+  display: flex;
+  //height: 55px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  @media (max-width: 750px) {
+    padding: 8px 16px 8px 16px ;
+  }
+}
+.logo_name__icon {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo_name__title {
+  color: $GRAY_100;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 750px) {
+    font-size: 1.6rem;
+  }
+}
+
+.logo_name__text {
+  color: $GRAY_100;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.logo_name__subtitle {
+  font-size: 3.4rem;
+  color: $GRAY_100;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  margin-left: 12px;
+  @media (max-width: 750px) {
+    margin-left: 10px;
+    font-size: 2.5rem;
+  }
+}
+.logo_name__image-wrapper{
+  //display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo_name__image {
+  width: 90%;
+}

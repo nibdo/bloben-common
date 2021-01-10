@@ -1,0 +1,54 @@
+.bitcoin-btn {
+  min-width: 210px;
+  color: #ffffff;
+  background-color: #121212 !important;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: Bold;
+  border: none;
+  padding: 0px 24px;
+  line-height: 27px;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center;
+  font-family: 'Poppins', sans-serif !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  cursor: pointer;
+  -webkit-touch-callout: default;
+  -webkit-tap-highlight-color: transparent;
+  pointer-events: auto;
+}
+.bmc-btn svg {
+  height: 32px !important;
+  margin-bottom: 0px !important;
+  box-shadow: none !important;
+  border: none !important;
+  vertical-align: middle !important;
+  transform: scale(0.9);
+}
+.bmc-btn {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: Bold;
+  line-height: 27px;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.bmc-btn-text {
+  color: #ffffff !important;
+  margin-left: 8px !important;
+  display: inline;
+  line-height: 0;
+}
+.bmc-btn:hover, .bmc-btn:active, .bmc-btn:focus {
+  cursor: pointer;
+}
+.bmc-btn {
+  color: #ffffff !important;
+  font-size: 24px;
+  font-weight: Bold;
+  line-height: 27px;
+  font-family: 'Poppins', sans-serif !important;
+}

@@ -1,0 +1,47 @@
+@import "bloben-common/globals/theme.scss";
+
+.logo__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.logo__text {
+  font-size: 2rem;
+  color: $text;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 0 6px;
+}
+
+.logo__text-primary {
+  @extend .logo__text;
+  color: $PRIMARY_LIGHT;
+}
+
+.logo__text-dark {
+  @extend .logo__text;
+  color: $textDark;
+}
+
+.logo__image {
+  width: 36px;
+  height: 36px;
+  margin-right: 4px;
+  fill: $text;
+}
+
+.logo__primary {
+  @extend .logo__image;
+  fill: $PRIMARY_LIGHT;
+}
+.logo__primary-dark {
+  @extend .logo__image;
+  fill: $PRIMARY_DARK;
+}
+
+.logo__image-dark {
+  @extend .logo__image;
+  fill: $textDark;
+}

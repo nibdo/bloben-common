@@ -1,0 +1,141 @@
+@import "bloben-common/globals/theme.scss";
+
+.input_form__wrapper {
+  height: auto;
+display: flex;
+flex-direction: column;
+position: relative;
+margin-bottom: 14px;
+}
+
+.input_form__input {
+  background-color: $SURFACE_LIGHT;
+  padding: 32px 16px 16px 16px;
+  //height: 65px;
+  font-size: 1.6rem !important;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  color: $text;
+  box-shadow: inset 0px 0px 0px 1px $GRAY_400;
+  -webkit-box-shadow: inset 0px 0px 0px 1px $GRAY_400;
+  &:focus {
+    color: black !important;
+    box-shadow: inset 0px 0px 0px 2px $PRIMARY_LIGHT;
+    -webkit-box-shadow: inset 0px 0px 0px 2px $PRIMARY_LIGHT;
+    & > .input_form__label {
+      color: $PRIMARY_LIGHT !important;
+    }
+  }
+}
+.input_form__input--dark {
+  @extend .input_form__input;
+  color: $textDark !important;
+  background-color: transparent;
+  box-shadow: inset 0px -1px 0px $BORDER_GRAY_DARK;
+  &:focus {
+    box-shadow: inset 0px -2px 0px $PRIMARY_DARK;
+    & > .input_form__label {
+      color: $PRIMARY_DARK !important;
+    }
+  }
+
+}
+.input_form__input--password--dark {
+  @extend .input_form__input--dark;
+
+}
+
+.input_form__input--password {
+  @extend .input_form__input;
+  padding-right: 45px;
+}
+
+
+.input_form__label {
+  font-size: 1.6rem;
+  padding-left: 16px;
+  padding-bottom: 2px;
+  margin: 0px;
+  color: $GRAY_700;
+  position: absolute;
+  top: 30%;
+  cursor: text;
+  pointer-events:none;
+}
+.input_form__label--dark {
+  @extend .input_form__label;
+  color: $grayDark;
+}
+
+.input_form__label--error {
+  @extend .input_form__label;
+  color: $error;
+}
+.input_form__label--error--dark {
+  @extend .input_form__label;
+  color: $errorDark;
+}
+
+.animate-label-up {
+  animation-name: move-up;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;
+}
+
+.input-label-up-default {
+  top: 10%;
+  font-size: 1.2rem;
+}
+
+@keyframes move-up {
+  0% {
+    top: 30%;
+    font-size: 1.6rem;
+  }
+  100% {
+    top: 10%;
+    font-size: 1.2rem;
+  }
+}
+.animate-label-down {
+  animation-name: move-down;
+  animation-delay: 0s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;
+}
+
+@keyframes move-down {
+  0% {
+    top: 10%;
+    font-size: 1.2rem;
+  }
+  100% {
+    top: 30%;
+    font-size: 1.6rem;
+  }
+}
+
+.password-icon__wrapper {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+}
+.password-icon__container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.password-icon__icon {
+  font-size: 1.8rem;
+}
