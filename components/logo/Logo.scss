@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .logo__text {
@@ -18,6 +17,10 @@
 .logo__text-primary {
   @extend .logo__text;
   color: $PRIMARY_LIGHT;
+}
+.logo__text-primary-dark {
+  @extend .logo__text-primary;
+  color: $PRIMARY_DARK;
 }
 
 .logo__text-dark {

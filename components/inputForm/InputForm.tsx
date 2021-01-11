@@ -1,34 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './InputForm.scss';
 
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import { IconButton } from '@material-ui/core';
+import { parseCssDark } from '../../utils/common';
+import { Context } from '../../../bloben-package/context/store';
 
 interface IPasswordIconProps {
   textType: string;
   handlePasswordIcon: any;
-  isDark?: boolean;
+  forceIsDarkFalse?: boolean;
 }
 
-const PasswordIcon = (props: IPasswordIconProps) => (
-    <div className={'password-icon__wrapper'}>
-    <p className={'input_form__label'} style={{color: 'transparent'}}>
-      {'.'}
-    </p>
-    <div className={'password-icon__container'}>
-    {props.textType === 'text' ? (
-      <IconButton onClick={props.handlePasswordIcon}>
-        <VisibilityOffIcon className={'password-icon__icon'}/>
-      </IconButton>
-    ) : (
-      <IconButton onClick={props.handlePasswordIcon} >
-        <VisibilityIcon className={'password-icon__icon'}/>
-      </IconButton>
-    )}
-    </div>
-  </div>
-);
+const PasswordIcon = (props: IPasswordIconProps) => {
+  const {forceIsDarkFalse} = props;
+
+  const [store] = useContext(Context);
+
+  const {isDark} = store;
+
+  return (
+      <div className={'password-icon__wrapper'}>
+        <p className={'input_form__label'} style={{color: 'transparent'}}>
+          {'.'}
+        </p>
+        <div className={'password-icon__container'}>
+          {props.textType === 'text' ? (
+              <IconButton onClick={props.handlePasswordIcon}>
+                <VisibilityOffIcon className={parseCssDark('password-icon__icon', forceIsDarkFalse ? false : isDark)}/>
+              </IconButton>
+          ) : (
+              <IconButton onClick={props.handlePasswordIcon}>
+                <VisibilityIcon className={parseCssDark('password-icon__icon', forceIsDarkFalse ? false : isDark)}/>
+              </IconButton>
+          )}
+        </div>
+      </div>
+  );
+}
 
 interface IInputFormProps {
   isPassword?: boolean;
@@ -47,11 +57,16 @@ interface IInputFormProps {
   onKeyPress?: any;
   submitEnter?: any;
   error?: string;
+  forceIsDarkFalse?: boolean;
 }
 
 const InputForm = (props: IInputFormProps) => {
   const [textType, setTextType] = useState('text');
   const [labelAnimation, setLabelAnimation] = useState('');
+
+  const [store] = useContext(Context);
+
+  const {isDark} = store;
 
   const {
     isPassword,
@@ -66,10 +81,10 @@ const InputForm = (props: IInputFormProps) => {
     placeholder,
     onFocus,
     onBlur,
-    isDark,
     defaultValue,
     maxLength,
-    error
+    error,
+    forceIsDarkFalse
   } = props;
 
   useEffect(() => {
@@ -110,14 +125,12 @@ const InputForm = (props: IInputFormProps) => {
 
   return (
     <div className={'input_form__wrapper'}>
-      <p className={`input_form__label${isDark ? '--dark' : ''} ${defaultValue ? 'input-label-up-default' : labelAnimation}`}>
+      <p className={`${parseCssDark('input_form__label', forceIsDarkFalse ? false : isDark)} ${defaultValue ? 'input-label-up-default' : labelAnimation}`}>
         {label}
       </p>
       {defaultValue ?
           <input
-              className={`input_form__input${isPassword ? '--password' : ''}${
-                  isDark ? '--dark' : ''
-              }`}
+              className={parseCssDark(`input_form__input${isPassword ? '--password' : ''}`, forceIsDarkFalse ? false : isDark)}
               name={name}
               type={textType}
               placeholder={placeholder}
@@ -125,9 +138,7 @@ const InputForm = (props: IInputFormProps) => {
               disabled={true}
           />
       :     <input
-              className={`input_form__input${isPassword ? '--password' : ''}${
-                  isDark ? '--dark' : ''
-              }`}
+              className={parseCssDark(`input_form__input${isPassword ? '--password' : ''}`, forceIsDarkFalse ? false : isDark)}
               name={props.name}
               type={textType}
               placeholder={placeholder}
@@ -152,14 +163,14 @@ const InputForm = (props: IInputFormProps) => {
 
       {isPassword ? (
         <PasswordIcon
-            isDark={isDark}
             handlePasswordIcon={handlePasswordIcon}
             textType={textType}
+            forceIsDarkFalse={forceIsDarkFalse}
         />
       ) : null}
       {error ? (
         <div style={{ bottom: -10 }}>
-          <p className={`input_form__label--error${isDark ? '--dark' : ''}`}>
+          <p className={parseCssDark('input_form__label--error', forceIsDarkFalse ? false : isDark)}>
             {error}
           </p>
         </div>

@@ -10,6 +10,7 @@ import { VpnKey } from '@material-ui/icons';
 import RedditIcon from 'bloben-common/assets/reddit.svg';
 import TwitterIcon from 'bloben-common/assets/twitter.svg';
 import GithubIcon from 'bloben-common/assets/github.svg';
+import { parseCssDark } from '../../utils/common';
 
 const handleScrollTo = (idName: string): void => {
   const element: any = document.getElementById(idName);
@@ -379,10 +380,10 @@ const Landing: any = {
   ),
   Separator: () => <div className={'landing__separator'} />,
   ButtonPrimary: (props: any) => {
-    const { title, onClick } = props;
+    const { title, onClick, isDark } = props;
 
     return (
-      <Button className={'landing__button-primary'} onClick={onClick}>
+      <Button className={parseCssDark('landing__button-primary', isDark)} onClick={onClick}>
         {title}
       </Button>
     );

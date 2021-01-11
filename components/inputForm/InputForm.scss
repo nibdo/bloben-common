@@ -27,21 +27,24 @@ margin-bottom: 14px;
     }
   }
 }
-.input_form__input--dark {
+.input_form__input-dark {
   @extend .input_form__input;
-  color: $textDark !important;
+  color: $GRAY_400 !important;
   background-color: transparent;
-  box-shadow: inset 0px -1px 0px $BORDER_GRAY_DARK;
+  box-shadow: inset 0px 0px 0px 1px $GRAY_200;
+  -webkit-box-shadow: inset 0px 0px 0px 1px $GRAY_200;
   &:focus {
-    box-shadow: inset 0px -2px 0px $PRIMARY_DARK;
+    color: $GRAY_100 !important;
+    box-shadow: inset 0px 0px 0px 2px $PRIMARY_DARK;
+    -webkit-box-shadow: inset 0px 0px 0px 2px $PRIMARY_DARK;
     & > .input_form__label {
       color: $PRIMARY_DARK !important;
     }
   }
 
 }
-.input_form__input--password--dark {
-  @extend .input_form__input--dark;
+.input_form__input--password-dark {
+  @extend .input_form__input-dark;
 
 }
 
@@ -62,7 +65,7 @@ margin-bottom: 14px;
   cursor: text;
   pointer-events:none;
 }
-.input_form__label--dark {
+.input_form__label-dark {
   @extend .input_form__label;
   color: $grayDark;
 }
@@ -138,4 +141,8 @@ margin-bottom: 14px;
 }
 .password-icon__icon {
   font-size: 1.8rem;
+}
+
+.password-icon__icon-dark {
+  color: $GRAY_300;
 }

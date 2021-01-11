@@ -303,6 +303,12 @@
   font-family: Poppins !important;
 }
 
+.landing__button-primary-dark {
+  @extend .landing__button-primary;
+  background-color: $PRIMARY_DARK !important;
+  color: $GRAY_900 !important;
+}
+
 .landing__button-demo {
   @extend .landing__button-primary;
   background-color: #303f9f !important;

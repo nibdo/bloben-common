@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './LoadingScreen.scss';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { Context } from '../../../bloben-package/context/store';
+import { parseCssDark } from '../../utils/common';
 
-interface ILoader {
-    isDark?: boolean;
-}
-const LoaderBig = (props: ILoader) => {
-    const {isDark} = props;
 
-    return <div className={`loading-screen__wrapper${isDark ? '-dark' : ''}`}>
+const LoaderBig = () => {
+    const [store] = useContext(Context);
+    const {isDark} = store;
+
+    return <div className={parseCssDark('loading-screen__wrapper', isDark)}>
         <CircularProgress
-            className={`loading-screen__spinner${isDark ? '-dark' : ''}`}
+            className={parseCssDark('loading-screen__spinner', isDark)}
         />
-        <p className={`loading-screen__text${isDark ? '-dark' : ''}`}>Loading</p>
+        <p className={parseCssDark('loading-screen__text', isDark)}>Loading</p>
     </div>
 }
 
-const LoaderSmall = (props: ILoader) => {
-    const {isDark} = props;
+const LoaderSmall = () => {
+    const [store] = useContext(Context);
+    const {isDark} = store;
 
-    return <div className={`loading-screen__container${isDark ? '-dark' : ''}`}>
+    return <div className={parseCssDark('loading-screen__wrapper', isDark)}>
         <CircularProgress
-            className={`loading-screen__spinner${isDark ? '-dark' : ''}`}
+            className={parseCssDark('loading-screen__spinner', isDark)}
         />
     </div>
 }

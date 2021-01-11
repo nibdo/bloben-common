@@ -94,14 +94,14 @@ html, body {
   height: 100%;
 }
 
-.root__wrapper {
+.root-wrapper {
   width: 100%;
   height: 100%;
   background-color: $SURFACE_LIGHT;
 }
 
-.root__wrapper-dark {
-  @extend .root__wrapper;
+.root-wrapper-dark {
+  @extend .root-wrapper;
   background-color: $SURFACE_DARK;
 }
 .web-link {
@@ -699,4 +699,13 @@ a {
   padding: 6px 8px 6px 8px !important;
   background: $GRAY_800 !important;
   color: $GRAY_200 !important;
+}
+
+
+//BottomSheet style
+.bottom-sheet__backdrop--dark {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+.bottom-sheet__container--dark {
+  background: $MODAL_DARK_LIGHTER !important;
 }
