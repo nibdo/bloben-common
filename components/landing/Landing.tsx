@@ -317,8 +317,8 @@ const Landing: any = {
       <a className={'landing__footer-text'} href={'https://bloben.com/privacy'}>
         Privacy policy
       </a>
-      <a className={'landing__footer-text'} href={'mailto:hello@bloben.com'}>
-        hello@bloben.com
+      <a className={'landing__footer-text'} href={'mailto:hello@nibdo.com'}>
+        hello@nibdo.com
       </a>
       <div
         style={{
