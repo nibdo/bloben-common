@@ -4,6 +4,7 @@ import Axios from 'bloben-common/utils/axios';
 import { ANALYTICS_URL } from '../globals/url';
 
 export const BITCOIN_ADDRESS_PATH: string = '/bitcoin-address';
+export const TIMEZONES_ADDRESS_PATH: string = 'timezones';
 
 const GeneralApi = {
     /*
@@ -11,6 +12,9 @@ const GeneralApi = {
      */
     getBitcoinAddress: async () =>
          Axios.get(`/${BITCOIN_ADDRESS_PATH}`),
+
+    getTimezones: async () =>
+        Axios.get(`/${TIMEZONES_ADDRESS_PATH}`),
 
     /**
      * Simple analytics with privacy in the mind

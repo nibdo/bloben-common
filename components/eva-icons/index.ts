@@ -44,8 +44,11 @@ import Bell from './bell';
 import Square from './square';
 import CircleFill from './circle-fill';
 import SkipBack from './skip-back';
+import Globe from './globe';
+
 export default {
   ArrowUp,
+  Globe,
   Award,
   Bell,
   SkipBack,
