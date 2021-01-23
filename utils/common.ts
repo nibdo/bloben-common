@@ -1,3 +1,4 @@
+export const STATUS_CODE_OK: number = 200;
 export const MOBILE_MAX_WIDTH: number = 750;
 
 // @ts-ignore

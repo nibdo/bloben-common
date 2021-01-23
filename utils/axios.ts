@@ -19,9 +19,9 @@ const Axios: any = {
   get: async (path: string) => {
     const URL: string = BASE_URL + path;
     try {
-      return await axios.get(URL, config);
+      return axios.get(URL, config);
     } catch (error) {
-      logger(error)
+      logger(error);
 
       return error.response;
     }
@@ -33,7 +33,7 @@ const Axios: any = {
 
       return response.json();
     } catch (error) {
-      logger(error)
+      logger(error);
 
       return error.response;
     }
@@ -41,11 +41,19 @@ const Axios: any = {
   post: async (path: string, data: any) => {
     const URL: string = BASE_URL + path;
     try {
-      const response: any = await axios.post(URL, data, config);
-
-      return response;
+      return axios.post(URL, data, config);
     } catch (error) {
-      logger(error)
+      logger(error);
+
+      return error.response;
+    }
+  },
+  patch: async (path: string, data: any) => {
+    const URL: string = BASE_URL + path;
+    try {
+      return axios.patch(URL, data, config);
+    } catch (error) {
+      logger(error);
 
       return error.response;
     }
@@ -53,11 +61,9 @@ const Axios: any = {
   put: async (path: string, data: any) => {
     const URL: string = BASE_URL + path;
     try {
-      const response: any = await axios.put(URL, data, config);
-
-      return response;
+      return axios.put(URL, data, config);
     } catch (error) {
-      logger(error)
+      logger(error);
 
       return error.response;
     }
@@ -65,11 +71,9 @@ const Axios: any = {
   delete: async (path: string, data: any) => {
     const URL: string = BASE_URL + path;
     try {
-      const response: any = await axios.delete(URL, { ...config, data });
-
-      return response;
+      return axios.delete(URL, { ...config, data });
     } catch (error) {
-      logger(error)
+      logger(error);
 
       return error.response;
     }
