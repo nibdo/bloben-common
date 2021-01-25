@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyText = () => {
   return (
-    <p><i>7.12.2020</i><br/><br/>
+    <p><i>25.1.2021</i><br/><br/>
 
       Bloben developer built the Bloben Calendar and Bloben Notes apps (as Bloben) as a Free app. This SERVICE is provided by Bloben developer at no cost and is intended for use as is.
       <br/> <br/>
@@ -14,19 +14,21 @@ const PrivacyText = () => {
       <br/><br/><b>Information Collection and Use</b>
       <br/>
       The app does not use third party services that may collect information used to identify you. We use only simple custom analytics which cannot be used to identify you.
-        We get only four information. First is referrer - url address where you clicked on the link (for example social site) and timezone location for general geolocation. Your IP address is not used for geolocation and it is also not stored.
-        We also store boolean flag if you your screen has width bellow or above breakpoint value without exact number and if your are visiting site as registered user.
+        We get only four information. First is referrer - url address where you clicked on the link (for example social site) and timezone location for general geolocation. Your IP address is not used for geolocation.
+        We also store flag if you your screen has width bellow or above breakpoint value without exact number and if your are visiting site as registered user.
         All information are stored anonymously and no user can be identified with them.
         This info is shared directly to Bloben's servers, no third party analytics is used. We do not store any information about what you do while visiting Bloben web and Bloben apps.
       <br/><br/><b>Log Data</b>
       <br/>
       We store information when you opened your account, last time you logged in, when you updated account and your basic settings. We store your email address if you set it for receiving updates and notifications.
-      <br/><br/><b>Cookies</b>
+        To prevent abuse of server, Bloben services or Bloben apps, IP address of each request to server might be temporary stored in the logs up to six months. Any attempt to unauthorized access to the server will result in automatic ban.
+        If you report and request to block abusing Bloben user (who might send you unwanted invites to calendar to your email), we might store your email address to block specific abusers or all users from contacting you. This record will be used for only purpose to protect you.
+        <br/><br/><b>Cookies</b>
       <br/>
       Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. For service no third-party cookies are used. Only cookies, which are used are to verify your identity when you log in to your account and connect to server.
       <br/><br/><b>Service Providers</b>
       <br/>
-      We use browser's native Web Push service to send push notifications. You will be asked for permission before. No content except dates are or category is displayed in notification. No other third-party companies and individuals are used.
+      We use browser's native Web Push service to send push notifications. You will be asked for permission before. No content except ids, dates or categories are displayed in notification. No other third-party companies and individuals are used.
       <br/><br/><b>Security</b>
       <br/>
       No method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
