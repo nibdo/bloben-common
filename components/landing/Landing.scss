@@ -1,6 +1,7 @@
 @import "bloben-common/globals/theme.scss";
 
 .landing__wrapper {
+  background-color: $SURFACE_LIGHT;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
