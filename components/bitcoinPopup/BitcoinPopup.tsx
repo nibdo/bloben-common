@@ -5,7 +5,7 @@ import { IconButton } from '@material-ui/core';
 import './BitcoinPopup.scss';
 import Axios from '../../utils/axios';
 import { BITCOIN_ADDRESS_PATH } from '../../api/general.api';
-import LoadingScreen from '../loadingScreen/LoadingScreen';
+// import LoadingScreen from '../loadingScreen/LoadingScreen';
 import EvaIcons from '../eva-icons';
 import InputForm from '../inputForm/InputForm';
 // tslint:disable-next-line:no-require-imports no-var-requires
@@ -28,6 +28,7 @@ const BitcoinContent = (props: IBitcoinContentProps) => {
             defaultValue={address}
             value={''}
             onChange={() => {return}}
+            isDark={false}
         />
         <p className={'bitcoin-popup__footer'}>Thank you!</p>
     </div>
@@ -76,12 +77,12 @@ const BitcoinPopup = (props: any) => {
             <IconButton className={'bitcoin-popup__button-close'} onClick={onCloseClick}>
                 <EvaIcons.Cross className={'icon-svg'}/>
             </IconButton>
-            {isLoadingAddress
-                ? <div className={'bitcoin-popup__loading-wrapper'}>
-                <LoadingScreen small/>
-                </div>
-                    : null
-            }
+            {/*{isLoadingAddress*/}
+            {/*    ? <div className={'bitcoin-popup__loading-wrapper'}>*/}
+            {/*    <LoadingScreen small/>*/}
+            {/*    </div>*/}
+            {/*        : null*/}
+            {/*}*/}
             {address.length > 0 ? <BitcoinContent address={address}/> : null }
         </div>
     </div >

@@ -11,6 +11,7 @@ import RedditIcon from 'bloben-common/assets/reddit.svg';
 import TwitterIcon from 'bloben-common/assets/twitter.svg';
 import GithubIcon from 'bloben-common/assets/github.svg';
 import { parseCssDark } from '../../utils/common';
+import NavbarMobile from '../../../components/navbar';
 
 const handleScrollTo = (idName: string): void => {
   const element: any = document.getElementById(idName);
@@ -217,6 +218,9 @@ const Landing: any = {
             )}
           </div>
         ) : null}
+          {isMobile && isMobileNavbarOpen ? <NavbarMobile page={page} handleClose={() => setIsMobileNavbarOpen(false)}/>
+              : null
+          }
       </div>
     );
   },

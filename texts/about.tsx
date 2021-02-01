@@ -24,7 +24,7 @@ const AboutText = () => {
       Server (VPS) from OVH provider is located in Germany.
 
       <br/><br/><b>What is not encrypted?</b><br/>
-      Your username, email (if you set one), event dates, reminder dates, shared status, login dates are stored in plain text and we can see them in database. Everything else like actual content of your data are encrypted.
+      Your username, email (if you set one), event dates, timezones, reminder dates, shared status, login dates are stored in plain text and we can see them in database. Everything else like actual content of your data are encrypted.
       <br/><br/></p>
   )
  }
