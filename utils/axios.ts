@@ -15,6 +15,10 @@ const config: any = {
   withCredentials: true,
 };
 
+if (process.env.REACT_APP_NODE_ENV === 'local') {
+  headers['X-Real-IP'] = 'localhost';
+}
+
 const Axios: any = {
   get: async (path: string) => {
     const URL: string = BASE_URL + path;
