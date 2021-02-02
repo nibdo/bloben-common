@@ -11,7 +11,7 @@ import RedditIcon from 'bloben-common/assets/reddit.svg';
 import TwitterIcon from 'bloben-common/assets/twitter.svg';
 import GithubIcon from 'bloben-common/assets/github.svg';
 import { parseCssDark } from '../../utils/common';
-import NavbarMobile from '../../../components/navbar';
+import NavbarMobile from '../../../components/navbarWeb/navbar';
 
 const handleScrollTo = (idName: string): void => {
   const element: any = document.getElementById(idName);
