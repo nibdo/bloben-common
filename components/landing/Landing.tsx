@@ -11,7 +11,7 @@ import RedditIcon from 'bloben-common/assets/reddit.svg';
 import TwitterIcon from 'bloben-common/assets/twitter.svg';
 import GithubIcon from 'bloben-common/assets/github.svg';
 import { parseCssDark } from '../../utils/common';
-import NavbarMobile from '../../../components/navbar';
+import NavbarWebMobile from './navbarWeb/navbar';
 
 const handleScrollTo = (idName: string): void => {
   const element: any = document.getElementById(idName);
@@ -90,7 +90,7 @@ const Landing: any = {
           !username ? (
             <div className={'landing__navbar-container-end'}>
               <Landing.LoginButton />
-              <Landing.RegisterButton />
+              {/*<Landing.RegisterButton />*/}
             </div>
           ) : (
             <div className={'landing__navbar-container-end'}>
@@ -218,7 +218,7 @@ const Landing: any = {
             )}
           </div>
         ) : null}
-          {isMobile && isMobileNavbarOpen ? <NavbarMobile page={page} handleClose={() => setIsMobileNavbarOpen(false)}/>
+          {isMobile && isMobileNavbarOpen && !isMainApp ? <NavbarWebMobile page={page} handleClose={() => setIsMobileNavbarOpen(false)}/>
               : null
           }
       </div>
@@ -384,10 +384,10 @@ const Landing: any = {
   ),
   Separator: () => <div className={'landing__separator'} />,
   ButtonPrimary: (props: any) => {
-    const { title, onClick, isDark } = props;
+    const { title, onClick, isDark, disabled } = props;
 
     return (
-      <Button className={parseCssDark('landing__button-primary', isDark)} onClick={onClick}>
+      <Button className={parseCssDark(disabled ? 'landing__button-disabled' : 'landing__button-primary', isDark)} onClick={disabled ? () => {} : onClick} disabled={disabled}>
         {title}
       </Button>
     );

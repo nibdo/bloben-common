@@ -304,6 +304,13 @@
   font-family: Poppins !important;
 }
 
+.landing__button-disabled {
+  @extend .landing__button-primary;
+  color: $GRAY_700 !important;
+  background-color: $GRAY_300 !important;
+}
+
+
 .landing__button-primary-dark {
   @extend .landing__button-primary;
   background-color: $PRIMARY_DARK !important;
@@ -566,4 +573,8 @@
 }
 .icon-social:hover {
   cursor: pointer;
+}
+
+.landing__wrap-text {
+  max-width: 262px;
 }

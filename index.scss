@@ -145,7 +145,14 @@ a {
     pointer-events: auto !important;
   }
 }
-
+.a-active {
+  pointer-events: initial !important;
+  -webkit-touch-callout: initial !important;
+  -webkit-user-select: initial !important;
+  -khtml-user-select: initial !important;
+  -moz-user-select: initial !important;
+  -ms-user-select: initial !important;
+}
 
 //input, textarea  {
 //  -webkit-touch-callout:default;
@@ -712,3 +719,8 @@ a {
 .bottom-sheet__container--dark {
   background: $MODAL_DARK_LIGHTER !important;
 }
+
+.primary-color {
+  color: $PRIMARY_LIGHT !important;
+}
+

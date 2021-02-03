@@ -1,0 +1,35 @@
+@import "bloben-common/globals/theme.scss";
+
+.checkbox__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+}
+
+.checkbox__icon-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border: solid 0.4px $GRAY_400 !important;
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 4px !important;
+}
+
+.checkbox__icon {
+  margin: 0 !important;
+  fill: rgba(255, 255, 255, 0);
+}
+
+.checkbox__icon-selected {
+  @extend .checkbox__icon;
+  fill: $PRIMARY_LIGHT;
+}
+
+.checkbox__text {
+  font-size: 1.3rem;
+ margin-left: 16px;
+  color: $GRAY_800;
+}
