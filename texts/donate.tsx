@@ -2,10 +2,9 @@ import React from 'react';
 
 const DonateText = () => {
   return (
-    <p>Everything is free and I would love,
-   if you will try and use Bloben Calendar. This is hobby project for my personal use and learning with no guarantees, but it will make me happy, if some of you will find it useful for your daily tasks.
+    <p>Developing Bloben is my hobby and not source of income, so you are free to use it if you find application useful.
    <br/><br/>
-   Operational costs are not that much for now, just a few Euro for VPS server, domain and mail service each month, but if you want to support me, you can make donation with Buy me coffee service or send me donation in Bitcoin. <br/> <br/>
+   Formally I offered Bloben as service on my server, but decided to continue only as self hosted project so this cut some costs. If anyone will still want to donate, I offer few options through Bitcoin, Patreon or Buy me coffee
    Thank you!</p>
   )
  }
