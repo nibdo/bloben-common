@@ -134,18 +134,18 @@ const Landing: any = {
             About
           </p>
         </div>
-        <div
-          className={'landing__navbar-link'}
-          onClick={() => navigateTo('/donate')}
-        >
-          <p
-            className={`landing__navbar-text${
-              page === 'donate' ? '-active' : ''
-            }`}
-          >
-            Donate
-          </p>
-        </div>
+        {/*<div*/}
+        {/*  className={'landing__navbar-link'}*/}
+        {/*  onClick={() => navigateTo('/donate')}*/}
+        {/*>*/}
+        {/*  <p*/}
+        {/*    className={`landing__navbar-text${*/}
+        {/*      page === 'donate' ? '-active' : ''*/}
+        {/*    }`}*/}
+        {/*  >*/}
+        {/*    Donate*/}
+        {/*  </p>*/}
+        {/*</div>*/}
       </div>
     );
   },
