@@ -90,7 +90,7 @@ const Landing: any = {
           !username ? (
             <div className={'landing__navbar-container-end'}>
               <Landing.LoginButton />
-              {/*<Landing.RegisterButton />*/}
+              <Landing.RegisterButton />
             </div>
           ) : (
             <div className={'landing__navbar-container-end'}>

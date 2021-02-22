@@ -37,6 +37,27 @@ const PasswordIcon = (props: IPasswordIconProps) => {
   );
 }
 
+interface IIconProps {
+  icon?: any;
+  isDark: boolean;
+}
+const Icon = (props: IIconProps) => {
+  const {isDark, icon} = props;
+
+  return (
+      <div className={'password-icon__wrapper'}>
+        <p className={'input_form__label'} style={{color: 'transparent'}}>
+          {'.'}
+        </p>
+        <div className={'password-icon__container'}>
+              <IconButton className={'password-icon__button'} disabled>
+                {icon}
+              </IconButton>
+        </div>
+      </div>
+  );
+}
+
 interface IInputFormProps {
   isPassword?: boolean;
   name: string;
@@ -55,6 +76,7 @@ interface IInputFormProps {
   submitEnter?: any;
   error?: string;
   forceIsDarkFalse?: boolean;
+  icon?: any;
 }
 
 const InputForm = (props: IInputFormProps) => {
@@ -78,7 +100,8 @@ const InputForm = (props: IInputFormProps) => {
     maxLength,
     error,
     forceIsDarkFalse,
-      isDark
+      isDark,
+      icon
   } = props;
 
   useEffect(() => {
@@ -162,6 +185,12 @@ const InputForm = (props: IInputFormProps) => {
             forceIsDarkFalse={forceIsDarkFalse}
             isDark={isDark}
         />
+      ) : null}
+      { icon ? (
+          <Icon
+              isDark={isDark}
+              icon={icon}
+          />
       ) : null}
       {error ? (
         <div style={{ bottom: -10 }}>

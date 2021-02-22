@@ -45,12 +45,20 @@ import Square from './square';
 import CircleFill from './circle-fill';
 import SkipBack from './skip-back';
 import Globe from './globe';
+import Edit from './edit';
+import CheckCircle from './checkCircle';
+import CrossCircle from './crossCircle';
+import QuestionCircle from './questionCircle';
 
 export default {
   ArrowUp,
+  CheckCircle,
+  CrossCircle,
+  QuestionCircle,
   Globe,
   Award,
   Bell,
+  Edit,
   SkipBack,
   Square,
   CircleFill,
