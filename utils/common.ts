@@ -1,5 +1,5 @@
-export const STATUS_CODE_OK: number = 200;
-export const MOBILE_MAX_WIDTH: number = 750;
+export const STATUS_CODE_OK = 200;
+export const MOBILE_MAX_WIDTH = 750;
 
 // @ts-ignore
 export const checkIfIsSafari = () => {
@@ -18,7 +18,7 @@ export const checkIfIsSafari = () => {
 };
 
 export const parseCssDark = (className: string, isDark: boolean): string =>
-    isDark ? `${className}-dark` : className;
+  isDark ? `${className}-dark` : className;
 
 /**
  * Basic log filtering for development
@@ -26,17 +26,11 @@ export const parseCssDark = (className: string, isDark: boolean): string =>
  * @param logB
  */
 export const logger = (logA: any, logB?: any): void => {
-    if (process.env.NODE_ENV !== 'production') {
-        if (logB) {
-            console.log(logA, logB)
-        } else {
-            console.log(logA);
-        }
+  if (process.env.NODE_ENV !== 'production') {
+    if (logB) {
+      console.log(logA, logB);
+    } else {
+      console.log(logA);
     }
-}
-
-export const alerter = (value: string): void => {
-        if (window.localStorage.getItem('isReactNative') === 'true') {
-            alert(value === 'string' ? value : JSON.stringify(value))
-    }
-}
+  }
+};
